@@ -1,15 +1,5 @@
 console.log();
 
-const convertCharToHTML = (char) => {
-    if (char === 'Ä') return "&Auml";
-    else if (char === 'ä') return "&auml";
-    else if (char === 'Å') return "&Aring";
-    else if (char === 'å') return "&aring";
-    else if (char === 'Ö') return "&Ouml";
-    else if (char === 'ö') return "&ouml";
-    else return char;
-}
-
 const verbs = [
     ["salja mjolk", "Den forsta december 1798 salde Juliana mjolk for 6 riksdaler till Cristina Charlotta Hiarne", "https://www.gaw.hist.uu.se/vad-kan-jag-hitta-i-gaw/kallunderlag/stockholm--cristina-charlotta-hiarnes-kassabok/"],
     ["komma i tj&aumlnst", "Den andra december 1685 b&oumlrjade Per Larsson sin anst&aumlllning som g&aringrdsdr&aumlng hos brukspatronen i Ramn&aumls", "https://www.gaw.hist.uu.se/vad-kan-jag-hitta-i-gaw/kallunderlag/ramnas--bruksrakenskaper/"],
@@ -36,11 +26,6 @@ const verbs = [
     ["komma i tjänst", "Den andra december 1685 började Per Larsson sin anställning som gårdsdräng hos brukspatronen i Ramnäs"],
     ["komma i tjänst", "Den andra december 1685 började Per Larsson sin anställning som gårdsdräng hos brukspatronen i Ramnäs"]
 ]
-
-const imgs = [
-    "./img/Bennet_mjolkpigor.jpg",
-    "./img/Ramnas.jpg"
-];
 
 let cards = [];
 
@@ -77,7 +62,7 @@ for (let i = 1; i < imgs.length + 1; i++) {
 const cardContainers = document.querySelectorAll(".card-container");
 
 const today = new Date();
-const currentDate = today.getDate() + (today.getMonth() + 2) * 100 + today.getFullYear() * 10000;
+const currentDate = today.getDate() + (today.getMonth() + 1) * 100 + today.getFullYear() * 10000;
 
 cardContainers.forEach(e => {
     e.addEventListener("click", event => {
